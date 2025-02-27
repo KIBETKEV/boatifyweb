@@ -1,0 +1,256 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; /* Light gray background */
+  color: #333;
+}
+
+
+.boats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 5 Cards per Row */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .boats-row {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .boats-row {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+
+.boat-card {
+  width: 100%;
+  height: 350px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.boat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.boat-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #e0e0e0; /* Fallback */
+}
+
+
+.boat-card-content {
+  padding: 16px;
+}
+
+.boat-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1f0531;
+  margin-bottom: 8px;
+}
+
+.boat-card-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.boat-card-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1f0531;
+  margin-bottom: 12px;
+}
+
+
+.boat-card-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0ca86f;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boat-card-button:hover {
+  background-color: #7ed0d9;
+}
+
+.boats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+  justify-items: center; /* Center cards in grid cells */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .boats-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .boats-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .boats-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .boats-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
+  }
+}
+.boat-card {
+  width: 100%;
+  height: 350px;
+  background-color: #f3f4f6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.boat-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.boat-details-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.boat-details-image {
+  flex: 1;
+  position: relative;
+}
+
+.boat-details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.boat-details-content {
+  flex: 1;
+  padding: 24px;
+}
+
+.boat-details-content h1 {
+  font-size: 2.0rem;
+  margin-bottom: 10px;
+  color: #1f0531;
+}
+
+.boat-location, .boat-price, .boat-rating {
+  font-size: 2rem;
+  color: #1f0531;;
+  margin-bottom: 6px;
+}
+
+.boat-rating {
+  display: flex;
+  align-items: center;
+}
+
+.boat-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: #1f0531;
+}
+
+.boat-features li {
+  display: flex;
+  align-items: center;
+  font-size: 1.4.rem;
+  color: #1f0531;
+}
+
+.boat-features li svg {
+  margin-right: 8px;
+  color: #0ca86f;
+}
+
+.book-now-btn {
+  width: 100%;
+  padding: 10px;
+  background: #0ca86f;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.book-now-btn:hover {
+  background: #08926b;
+}
+
